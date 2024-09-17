@@ -70,6 +70,23 @@ body main section p {
     margin: 1rem 0;
 }
 
+body main ul {
+    list-style-type: none;
+}
+
+body main ul li {
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    list-style: none;
+    align-items: center;
+    justify-content: baseline;
+    padding: .3rem .3rem .3rem 1.5rem;
+    background: url('../assets/icons/brilha.png') no-repeat left center;
+    background-size: 1rem;
+}
+
 body main section .container {
     display: flex;
     flex-direction: column;
