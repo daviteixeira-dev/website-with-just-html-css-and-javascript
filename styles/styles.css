@@ -2,17 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
-    color: #2b2b45;
     font-size: 62.5%;
-    font-size: 1.2rem;
+    --color-base-white: rgb(249, 249, 249);
+    --color-base-pink-100: rgb(255, 221, 230, 0.5);
+    --color-base-pink-400: rgb(254, 159, 166);
+    --color-base-pink-800: rgb(254, 159, 166);
+    --color-base-gray-500: rgb(43, 43, 69);
+    --color-base-gray-700: rgb(28, 28, 28);
+    --color-base-green-500: rgb(0, 128, 0);
+    --color-base-green-500: rgb(154, 205, 50);
+}
+
+html, body {
+    scroll-behavior: smooth;
     font-family: "Rubik", sans-serif;
+    color: var(--color-base-gray-500);
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: var(--color-base-white);
 }
 
 body header {
@@ -20,7 +33,7 @@ body header {
     padding: 1rem;
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-color: rgb(255, 221, 230, 0.5);
+    background-color: var(--color-base-pink-100);
 }
 
 body header::before {
@@ -37,6 +50,76 @@ body header::before {
     background-image: url('../assets/images/nails-03.png');
 }
 
+body header #menu-toggle {
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    background: none;
+    font-weight: bold;
+    color: var(--color-base-gray-500);
+}
+
+body header #sidebar-menu {
+    top: 0;
+    z-index: 2;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    transition: left 0.3s ease;
+    color: var(--color-base-gray-500);
+    background-color: var(--color-base-white);
+}
+
+body header #sidebar-menu ul {
+    padding: 20px;
+    margin-top: 5rem;
+    list-style-type: none;
+}
+
+body header #sidebar-menu ul li {
+    margin-bottom: 20px;
+}
+
+body header #sidebar-menu ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-base-gray-500);
+}
+
+body header #sidebar-menu ul li a:hover {
+    color: var(--color-base-gray-700)
+}
+
+body header #sidebar-menu.open {
+    left: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: relative;
+}
+
+body.menu-open::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body header .left {
+    margin-top: 4rem;
+}
+
 body header .right {
     display: none;
 }
@@ -48,9 +131,9 @@ body header h1 {
 
 body main h2 {
     margin: 1rem;
-    color: #fe9fa6;
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--color-base-pink-400);
     font-family: "Playfair Display", serif;
 }
 
@@ -68,22 +151,22 @@ body main section {
 
 body main .courses {
     padding: 1rem;
-    background-color: #f2f2f2;
-    border-top: 3px solid #fe9fa6;
+    background-color: var(--color-base-white);
+    border-top: 3px solid var(--color-base-pink-400);
 }
 
 body main section h3 {
     margin: 1rem 0;
-    color: #fe9fa6;
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--color-base-pink-400);
     font-family: "Playfair Display", serif;
 }
 
 body main .courses h3 {
-    color: #2b2b45;
     font-weight: 600;
     font-size: 1.5rem;
+    color: var(--color-base-gray-500);
     font-family: "Playfair Display", serif;
 }
 
@@ -186,35 +269,35 @@ body main section .container .tablet .nota .button {
     width: 100%;
     height: 3rem;
     display: flex;
-    color: #f2f2f2;
     padding: 2rem 1rem;
     text-align: center;
     border-radius: 2rem;
     align-items: center;
     text-decoration: none;
     justify-content: center;
-    background-color: green;
+    color: var(--color-base-white);
     transition: all 200ms ease-out;
+    background-color: var(--color-base-green-500);
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
 body main section .container .tablet .nota .button:hover {
     cursor: pointer;
-    background-color: greenyellow;
+    background-color: var(--color-base-green-700);
 }
 
 body main section h4 {
-    color: #fe9fa6;
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--color-base-pink-400);
     font-family: "Playfair Display", serif;
 }
 
 body main section h5 {
-    color: #fe9fa6;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: var(--color-base-pink-400);
     font-family: "Playfair Display", serif;
 }
 
@@ -240,13 +323,13 @@ body main section .faq details summary {
 
 .faq-details {
     padding: 1rem;
-    background-color: #fe9fa6;
+    background-color: var(--color-base-pink-800)
 }
 
 body footer {
     padding: 1rem;
     text-align: center;
-    background-color: #fe9fa6;
+    background-color: var(--color-base-pink-800)
 }
 
 @media(min-width: 768px){
@@ -264,7 +347,6 @@ body footer {
         display: flex;
         padding: 1rem;
         text-align: left;
-        /*padding: 0 8rem;*/
         flex-direction: column;
         justify-content: center;
     }
