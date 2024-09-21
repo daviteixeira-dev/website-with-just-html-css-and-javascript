@@ -10,12 +10,13 @@
     font-size: 62.5%;
     --color-base-white: rgb(249, 249, 249);
     --color-base-pink-100: rgb(255, 221, 230, 0.5);
-    --color-base-pink-400: rgb(254, 159, 166);
+    --color-base-pink-400: rgb(253, 203, 207);
     --color-base-pink-800: rgb(254, 159, 166);
+    --color-base-gray-100: rgb(242, 242, 242);
     --color-base-gray-500: rgb(43, 43, 69);
     --color-base-gray-700: rgb(28, 28, 28);
     --color-base-green-500: rgb(0, 128, 0);
-    --color-base-green-500: rgb(154, 205, 50);
+    --color-base-green-700: rgb(154, 205, 50);
 }
 
 html, body {
@@ -25,6 +26,7 @@ html, body {
 }
 
 body {
+    font-size: 1.6rem;
     background-color: var(--color-base-white);
 }
 
@@ -58,9 +60,16 @@ body header #menu-toggle {
     font-size: 2rem;
     cursor: pointer;
     position: fixed;
-    background: none;
     font-weight: bold;
+    border-radius: 50%;
+    padding: 1rem 1.5rem;
     color: var(--color-base-gray-500);
+    background: var(--color-base-pink-400);
+}
+
+body header #menu-toggle:hover{
+    transition: all 200ms ease-out;
+    background: var(--color-base-pink-800);
 }
 
 body header #sidebar-menu {
@@ -77,7 +86,7 @@ body header #sidebar-menu {
 
 body header #sidebar-menu ul {
     padding: 20px;
-    margin-top: 5rem;
+    margin-top: 8rem;
     list-style-type: none;
 }
 
@@ -124,25 +133,28 @@ body header .right {
     display: none;
 }
 
-body header h1 {
+body header .left h1 {
     margin: 1rem 0;
+    padding-top: 2rem;
+    font-size: 4.5rem;
     font-family: "Playfair Display", serif;
+}
+
+body header .left p {
+    font-size: 2rem;
 }
 
 body main h2 {
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-400);
+    color: var(--color-base-pink-800);
     font-family: "Playfair Display", serif;
 }
 
 body main p {
     margin: 1rem;
-}
-
-body main ul {
-    margin: 1rem;
+    font-size: 2rem;
 }
 
 body main section {
@@ -151,21 +163,21 @@ body main section {
 
 body main .courses {
     padding: 1rem;
-    background-color: var(--color-base-white);
-    border-top: 3px solid var(--color-base-pink-400);
+    background-color: var(--color-base-gray-100);
+    border-top: 3px solid var(--color-base-pink-800);
 }
 
 body main section h3 {
     margin: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-400);
+    color: var(--color-base-pink-800);
     font-family: "Playfair Display", serif;
 }
 
 body main .courses h3 {
+    font-size: 3rem;
     font-weight: 600;
-    font-size: 1.5rem;
     color: var(--color-base-gray-500);
     font-family: "Playfair Display", serif;
 }
@@ -175,38 +187,38 @@ body main section p {
 }
 
 body main ul {
+    margin: 1rem;
     list-style-type: none;
 }
 
 body main ul li {
     width: 100%;
     display: flex;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
     list-style: none;
     align-items: center;
     justify-content: baseline;
-    padding: .3rem .3rem .3rem 1.5rem;
+    padding: .3rem .3rem .3rem 3rem;
     background: url('../assets/icons/brilha.png') no-repeat left center;
-    background-size: 1rem;
+    background-size: 2rem;
 }
 
-body main section .container {
+body main .courses .container {
     display: flex;
     flex-direction: column;
 }
 
-body main section .container figure {
+body main .courses .container figure {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-body main section .container figure a img {
+body main .courses .container figure a img {
     width: 100%;
-    height: 100%;
 }
 
-body main section .container .tablet .pontos {
+body main .courses .container .tablet .pontos {
     width: 100%;
     height: auto;
     display: flex;
@@ -216,60 +228,66 @@ body main section .container .tablet .pontos {
     justify-content: center;
 }
 
-body main section .container .tablet .pontos li {
+body main .courses .container .tablet .pontos li {
     width: 100%;
     display: flex;
-    font-size: 1rem;
+    margin: .5rem;
+    font-size: 2rem;
     font-weight: 500;
     list-style: none;
     align-items: center;
     justify-content: baseline;
-    padding: .3rem .3rem .3rem 1.5rem;
+    padding: .3rem .3rem .3rem 3rem;
 }
 
-body main section .container .tablet .pontos .class-x {
+body main .courses .container .tablet .pontos .class-x {
     background: url('../assets/icons/excluir.png') no-repeat left center;
-    background-size: 1rem;
+    background-size: 2rem;
 }
 
-body main section .container .tablet .pontos .class-v {
+body main .courses .container .tablet .pontos .class-v {
     background: url('../assets/icons/verificar.png') no-repeat left center;
-    background-size: 1rem;
+    background-size: 2rem;
 }
 
-body main section .container .tablet .nota {
+body main .courses .container .tablet .nota {
+    gap: 1rem;
     width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
     text-align: center;
     margin-bottom: 1rem;
+    flex-direction: column;
 }
 
-body main section .container .tablet .nota h4 {
-    font-weight: 500;
-    font-size: 1.2rem;
+body main .courses .container .tablet .nota h4 {
+    font-size: 3rem;
+    font-weight: bold;
     font-family: "Playfair Display", serif;
 }
 
-body main section .container .tablet .nota p {
+body main .courses .container .tablet .nota p {
+    font-size: 3.5rem;
     font-weight: 500;
-    font-size: 2.5rem;
 }
 
-body main section .container .tablet .nota .stars {
+body main .courses .container .tablet .nota .stars {
     display: flex;
     margin-bottom: 1rem;
     justify-content: space-evenly;
 }
 
-body main section .container .tablet .nota .stars img {
-    width: 1.5rem;
-    height: 1.5rem;
+body main .courses .container .tablet .nota .stars img {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
-body main section .container .tablet .nota .button {
+body main .courses .container .tablet .nota .button {
     width: 100%;
     height: 3rem;
     display: flex;
-    padding: 2rem 1rem;
+    font-size: 2rem;
+    padding: 3rem 2rem;
     text-align: center;
     border-radius: 2rem;
     align-items: center;
@@ -281,23 +299,23 @@ body main section .container .tablet .nota .button {
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
-body main section .container .tablet .nota .button:hover {
+body main .courses .container .tablet .nota .button:hover {
     cursor: pointer;
     background-color: var(--color-base-green-700);
 }
 
 body main section h4 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-400);
+    color: var(--color-base-pink-800);
     font-family: "Playfair Display", serif;
 }
 
 body main section h5 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: var(--color-base-pink-400);
+    color: var(--color-base-pink-800);
     font-family: "Playfair Display", serif;
 }
 
@@ -319,6 +337,7 @@ body main section .faq details:hover {
 
 body main section .faq details summary {
     padding: 1rem;
+    font-size: 2rem
 }
 
 .faq-details {
@@ -374,37 +393,37 @@ body footer {
         padding: 0 1rem;
     }
     
-    body main section {
+    body main .courses {
         gap: 1rem;
         align-items: center;
         justify-content: center;
     }
 
-    body main section .container {
+    body main .courses .container {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
-    body main section .container figure {
+    body main .courses .container figure {
         width: 45%;
     }
     
-    body main section .container figure a img {
+    body main .courses .container figure a img {
         width: 100%;
     }
 
-    body main section .container .tablet {
+    body main .courses .container .tablet {
         width: 50%;
         display: flex;
         flex-direction: column;
     }
     
-    body main section .container .tablet .pontos {
+    body main .courses .container .tablet .pontos {
         width: 100%;
     }
     
-    body main section .container .tablet .nota {
+    body main .courses .container .tablet .nota {
         width: 100%;
         text-align: center;
     }
@@ -434,62 +453,49 @@ body footer {
         text-transform: uppercase;
     }
 
-    body header p {
-        font-weight: 400;
-        font-size: 1.2rem;
-    }
-    
     body main {
         padding: 0 10rem;
     }
 
-    body main section .container {
+    body main .courses .container {
+        gap: 1rem;
         align-items: center;
+        flex-direction: row;
     }
 
-    body main section .container figure {
+    body main .courses .container figure {
         margin: 0;
         padding: 0;
         width: 35%;
     }
 
-    body main section .container figure a img {
+    body main .courses .container figure a img {
         width: 100%;
         height: 100%;
     }
 
-    body main section .container .tablet {
+    body main .courses .container .tablet {
+        gap: 1rem;
         width: 65%;
         height: 100%;
         flex-direction: row;
     }
 
-    body main section .container .tablet .pontos {
+    body main .courses .container .tablet .pontos {
         margin: 0;
         width: 50%;
         padding: .5rem;
-    }
-
-    body main section .container .tablet .pontos li {
-        font-size: .8rem;
-    }
+    }    
     
-    body main section .container .tablet .nota {
+    body main .courses .container .tablet .nota {
         margin: 0;
         width: 50%;
         text-align: center;
-    }
+    }    
 
-    body main section .container .tablet .nota .stars img {
-        width: 1rem;
-        height: 1rem;
-    }
-
-    body main section .container .tablet .nota .button {
+    body main .courses .container .tablet .nota .button {
         width: 100%;
         height: 3rem;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 1rem 2rem;
+        font-weight: 400;       
     }
 }
