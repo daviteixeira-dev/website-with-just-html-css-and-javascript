@@ -15,8 +15,8 @@
     --color-base-gray-100: rgb(242, 242, 242);
     --color-base-gray-500: rgb(43, 43, 69);
     --color-base-gray-700: rgb(28, 28, 28);
-    --color-base-green-500: rgb(0, 128, 0);
-    --color-base-green-700: rgb(154, 205, 50);
+    --color-base-green-500: #35A585;
+    --color-base-green-700: #3AE6B4;
 }
 
 html, body {
@@ -293,6 +293,7 @@ body main .courses .container .tablet .nota .button {
     align-items: center;
     text-decoration: none;
     justify-content: center;
+    text-transform: uppercase;
     color: var(--color-base-white);
     transition: all 200ms ease-out;
     background-color: var(--color-base-green-500);
@@ -301,6 +302,7 @@ body main .courses .container .tablet .nota .button {
 
 body main .courses .container .tablet .nota .button:hover {
     cursor: pointer;
+    transform: scale(1.1);
     background-color: var(--color-base-green-700);
 }
 
@@ -343,6 +345,26 @@ body main section .faq details summary {
 .faq-details {
     padding: 1rem;
     background-color: var(--color-base-pink-800)
+}
+
+body main .risco {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body main .risco img {
+    width: 100%
+}
+
+body main .risco h6 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-base-pink-800);
+    font-family: "Playfair Display", serif;
 }
 
 body footer {
@@ -427,6 +449,11 @@ body footer {
         width: 100%;
         text-align: center;
     }
+
+    body main .risco img {
+        width: 35rem;
+        height: 20rem;
+    }
 }
 
 @media(min-width: 1024px){
@@ -455,6 +482,10 @@ body footer {
 
     body main {
         padding: 0 10rem;
+    }
+
+    body main .courses {
+        padding: 2rem;
     }
 
     body main .courses .container {
