@@ -15,3 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+const anoAtual = new Date().getFullYear();
+const mesatual = new Date().getMonth() + 1;
+
+const elementoAno = document.getElementById('ano-frase');
+const elementoMesAnoFrase = document.getElementById('mes-ano-frase');
+
+elementoAno.textContent = `${anoAtual}`;
+elementoMesAnoFrase.textContent = `Última atualização: ${mesatual + '/' + anoAtual}!`;
