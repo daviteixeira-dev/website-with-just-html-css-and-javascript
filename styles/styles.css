@@ -15,8 +15,8 @@
     --color-base-gray-100: rgb(242, 242, 242);
     --color-base-gray-500: rgb(43, 43, 69);
     --color-base-gray-700: rgb(28, 28, 28);
-    --color-base-green-500: #35A585;
-    --color-base-green-700: #3AE6B4;
+    --color-base-green-500: rgb(53, 165, 133);
+    --color-base-green-700: rgb(58, 230, 180);
 }
 
 html, body {
@@ -31,25 +31,11 @@ body {
 }
 
 body header {
-    height: 90vh;
-    padding: 1rem;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-color: var(--color-base-pink-100);
-}
-
-body header::before {
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    height: 90vh;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../assets/images/nails-03.png');
+    height: auto;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid var(--color-base-pink-800);
+    background: linear-gradient(90deg, rgba(255,221,230,1) 0%, rgba(253,203,207,1) 35%, rgba(254,159,166,1) 100%);
 }
 
 body header #menu-toggle {
@@ -135,8 +121,8 @@ body header .right {
 
 body header .left h1 {
     margin: 1rem 0;
+    font-size: 6rem;
     padding-top: 2rem;
-    font-size: 4.5rem;
     font-family: "Playfair Display", serif;
 }
 
@@ -145,7 +131,7 @@ body header .left p {
 }
 
 body main h2 {
-    margin: 1rem;
+    padding: 2rem;
     font-size: 3rem;
     font-weight: bold;
     color: var(--color-base-pink-800);
@@ -153,22 +139,23 @@ body main h2 {
 }
 
 body main p {
-    margin: 1rem;
     font-size: 2rem;
+    line-height: 3rem;
+    padding: 1rem 2rem;
 }
 
 body main section {
-    padding: .5rem;
+    padding: 1rem 2rem;
 }
 
 body main .courses {
-    padding: 1rem;
+    padding: 1rem 2rem;
     background-color: var(--color-base-gray-100);
     border-top: 3px solid var(--color-base-pink-800);
 }
 
 body main section h3 {
-    margin: 1rem 0;
+    padding: 0 2rem;
     font-size: 3rem;
     font-weight: bold;
     color: var(--color-base-pink-800);
@@ -176,6 +163,7 @@ body main section h3 {
 }
 
 body main .courses h3 {
+    padding: 0;
     font-size: 3rem;
     font-weight: 600;
     color: var(--color-base-gray-500);
@@ -183,11 +171,14 @@ body main .courses h3 {
 }
 
 body main section p {
+    padding: 0;
     margin: 1rem 0;
+    line-height: 3rem;
 }
 
 body main ul {
     margin: 1rem;
+    padding: 0rem 2rem;
     list-style-type: none;
 }
 
@@ -349,7 +340,7 @@ body main section .faq details summary {
 
 body main .risco {
     display: flex;
-    padding: 1rem;
+    padding: 2rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -368,7 +359,10 @@ body main .risco h6 {
 }
 
 body footer {
-    padding: 1rem;
+    width: 100%;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-align: center;
     background-color: var(--color-base-pink-800)
 }
