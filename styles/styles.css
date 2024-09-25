@@ -251,9 +251,10 @@ body main .courses .container .tablet .nota {
     flex-direction: column;
 }
 
-body main .courses .container .tablet .nota h4 {
+body main .courses .container .tablet .nota .p-nota {
     font-size: 3rem;
     font-weight: bold;
+    color: var(--color-base-pink-800);
     font-family: "Playfair Display", serif;
 }
 
