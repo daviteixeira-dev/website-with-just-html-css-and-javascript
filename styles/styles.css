@@ -369,7 +369,8 @@ body footer {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
-    background-color: var(--color-base-pink-800)
+    background-color: var(--color-base-pink-800);
+    border-top: 5px solid var(--color-base-pink-400);
 }
 
 @media(min-width: 768px){
