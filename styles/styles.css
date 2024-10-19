@@ -125,7 +125,7 @@ body header .right {
 
 body header .left h1 {
     margin: 1rem 0;
-    font-size: 6rem;
+    font-size: 5rem;
     padding-top: 2rem;
     font-family: "Playfair Display", serif;
 }
@@ -477,23 +477,68 @@ body footer {
         background: linear-gradient(90deg, rgba(255,221,230,1) 0%, rgba(253,203,207,1) 35%, rgba(254,159,166,1) 100%);
     }
 
+    /* Menu Superior */
+
     body header #menu ul {
+        margin: 0;
+        padding: 0;
         width: 100%;
-        padding: 1rem;
         display: flex;
         align-items: center;
+        list-style-type: none;
         justify-content: space-evenly;
     }
 
     body header #menu ul li {
-        list-style-type: none;
+        position: relative;
+        margin-right: 2rem;
     }
 
     body header #menu ul li a {
+        display: block;
         font-weight: 500;
         font-size: 1.8rem;
+        padding: 10px 15px;
         text-decoration: none;
         color: var(--color-base-gray-500);
+    }
+
+    body header #menu ul li .submenu {
+        left: 0;
+        top: 100%; /* Coloca o submenu logo abaixo do item de menu pai */
+        z-index: 1;
+        display: none;
+        position: absolute; /* Para que o submenu fique sobreposto */
+        background-color: var(--color-base-white);
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    }
+
+    body header #menu ul li .submenu li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body header #menu ul li .submenu li a {
+        width: 40rem; /* Definindo a largura do submenu */
+        color: black;
+        text-align: left;
+        padding: 10px 15px;
+        background-color: #f9f9f9;
+    }
+    
+    /* Mostrar o submenu ao passar o mouse no item "Blog" */
+    body header #menu ul li:hover .submenu,
+    body header #menu ul li:focus-within .submenu {
+        display: block;
+    }
+    
+    /* Estilos opcionais para o submenu */
+    body header #menu ul li .submenu li a:hover {
+        background-color: #e2e2e2; /* Cor de fundo ao passar o mouse nos itens do submenu */
+    }
+
+    body header #menu ul li .submenu li a:focus {
+        background-color: #e2e2e2;
     }
 
     body header #menu ul li a:hover{
@@ -505,6 +550,8 @@ body footer {
         width: 4.5rem;
         height: 4.5rem;
     }
+
+    /* Fim - Menu Superior */
 
     body header .left {
         width: 69%;
