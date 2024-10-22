@@ -10,7 +10,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
     
     <meta http-equiv="Content-Language" content="pt-BR">
     <meta name="robots" content="index, follow">
@@ -34,7 +35,8 @@
     <meta property="twitter:description" content="Descubra os melhores cursos de manicure online com certificação. Aprenda técnicas profissionais e segredos para se destacar na área. Inscreva-se agora e transforme sua carreira!">
     <meta property="twitter:image" content="https://melhorescursosdemanicureonline.vercel.app/assets/icons/logo-manicure.webp">
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preload" href="./styles/styles.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles/styles.css"></noscript>
 </head>
 <body>
     <header>
@@ -521,6 +523,6 @@
     <footer>
         <p>© <span id="ano-frase"></span>. melhorescursosdemanicureonline.vercel.app. Todos os direitos reservados.</p>
     </footer>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js" defer></script>
 </body>
 </html>
