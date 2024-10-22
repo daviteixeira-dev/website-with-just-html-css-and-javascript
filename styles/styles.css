@@ -195,7 +195,7 @@ body main ul li {
     align-items: center;
     justify-content: baseline;
     padding: .3rem .3rem .3rem 3rem;
-    background: url('../assets/icons/brilha.png') no-repeat left center;
+    background: url('../assets/icons/brilha.webp') no-repeat left center;
     background-size: 2rem;
 }
 
@@ -236,12 +236,12 @@ body main .courses .container .tablet .pontos li {
 }
 
 body main .courses .container .tablet .pontos .class-x {
-    background: url('../assets/icons/excluir.png') no-repeat left center;
+    background: url('../assets/icons/excluir.webp') no-repeat left center;
     background-size: 2rem;
 }
 
 body main .courses .container .tablet .pontos .class-v {
-    background: url('../assets/icons/verificar.png') no-repeat left center;
+    background: url('../assets/icons/verificar.webp') no-repeat left center;
     background-size: 2rem;
 }
 
