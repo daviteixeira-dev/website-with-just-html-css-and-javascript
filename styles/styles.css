@@ -404,6 +404,7 @@ body footer {
     body header .right img {
         height: auto;
         max-width: 100%;
+        padding: 0rem 4rem;
     }
 
     body header h1 {
@@ -564,6 +565,10 @@ body footer {
 
     body header .right {
         width: 29%;
+    }
+
+    body header .right img {
+        padding: 0;
     }
 
     body header h1 {
