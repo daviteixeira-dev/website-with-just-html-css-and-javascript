@@ -400,10 +400,10 @@ body footer {
         align-items: end;
         justify-content: end;
     }
-    
+
     body header .right img {
-        height: 100%;
-        max-width: auto;
+        height: auto;
+        max-width: 100%;
     }
 
     body header h1 {
@@ -564,10 +564,6 @@ body footer {
 
     body header .right {
         width: 29%;
-    }
-
-    body header .right img {
-        height: 90%;
     }
 
     body header h1 {
