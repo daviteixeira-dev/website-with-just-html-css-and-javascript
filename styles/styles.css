@@ -12,6 +12,7 @@
     --color-base-pink-100: rgb(255, 221, 230, 0.5);
     --color-base-pink-400: rgb(253, 203, 207);
     --color-base-pink-800: rgb(254, 159, 166);
+    --color-base-pink-900: rgb(206, 127, 132);
     --color-base-gray-100: rgb(242, 242, 242);
     --color-base-gray-500: rgb(43, 43, 69);
     --color-base-gray-700: rgb(28, 28, 28);
@@ -156,7 +157,7 @@ body main h2 {
     padding: 2rem;
     font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
@@ -179,7 +180,7 @@ body main .courses {
 body main section h3 {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
@@ -276,7 +277,7 @@ body main .courses .container .tablet .nota {
 body main .courses .container .tablet .nota .p-nota {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
@@ -323,7 +324,7 @@ body main .courses .container .tablet .nota .button:hover {
 body main section h4 {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
@@ -331,7 +332,7 @@ body main section h5 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
@@ -378,7 +379,7 @@ body main .risco h6 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: var(--color-base-pink-800);
+    color: var(--color-base-pink-900);
     font-family: "Playfair Display", serif;
 }
 
