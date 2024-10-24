@@ -33,9 +33,24 @@ body {
 body header {
     height: auto;
     padding: 2rem;
+    overflow: hidden;
+    position: relative;
     margin-bottom: 1rem;
     border-bottom: 5px solid var(--color-base-pink-800);
-    background: linear-gradient(90deg, rgba(255,221,230,1) 0%, rgba(253,203,207,1) 35%, rgba(254,159,166,1) 100%);
+}
+
+body header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/images/desktop-1440/img-nails-banner.webp") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 body header #menu {
@@ -115,22 +130,24 @@ body.menu-open::before {
     background: rgba(0, 0, 0, 0.5);
 }
 
-body header .left {
+body header .hero {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    text-align: left;
     margin-top: 4rem;
+    flex-direction: column;
+    justify-content: center;
 }
 
-body header .right {
-    display: none;
-}
-
-body header .left h1 {
+body header .hero h1 {
     margin: 1rem 0;
     font-size: 4.5rem;
     padding-top: 2rem;
     font-family: "Playfair Display", serif;
 }
 
-body header .left p {
+body header .hero p {
     font-size: 2rem;
     line-height: 3rem;
 }
@@ -385,26 +402,8 @@ body footer {
         justify-content: center;
     }
     
-    body header .left {
-        width: 50%;
-        display: flex;
-        padding: 1rem;
-        text-align: left;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    body header .right {
-        width: 50%;
-        display: flex;
-        align-items: end;
-        justify-content: end;
-    }
-
-    body header .right img {
-        height: auto;
-        max-width: 100%;
-        padding: 0rem 4rem;
+    body header .hero {
+        padding: 0 8rem;
     }
 
     body header h1 {
@@ -463,7 +462,7 @@ body footer {
 @media(min-width: 1024px){
 
     body header {
-        padding: 0 1rem;
+        justify-content: flex-start;
     }
 
     body header #menu-toggle {
@@ -558,19 +557,10 @@ body footer {
 
     /* Fim - Menu Superior */
 
-    body header .left {
-        width: 69%;
-        padding: 0 8rem;
+    body header .hero {
+        width: 70%;
     }
-
-    body header .right {
-        width: 29%;
-    }
-
-    body header .right img {
-        padding: 0;
-    }
-
+    
     body header h1 {
         font-size: 3rem;
         text-transform: uppercase;
