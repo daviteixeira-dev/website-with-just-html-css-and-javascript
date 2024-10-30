@@ -20,6 +20,7 @@ body main .article-content {
 }
 
 .cta-link {
+    font-weight: bold;
     color: var(--color-base-pink-900)
 }
 
