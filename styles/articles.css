@@ -13,22 +13,6 @@ body main .article-content {
     max-width: 100%;
 }
 
-body main h2 {
-    padding: 0;
-}
-
-body main .article-content h2
-body main .article-content h3,
-body main .article-content h4,
-body main .article-content h5,
-body main .article-content h6 {
-    padding: 0;
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--color-base-pink-800);
-    font-family: "Playfair Display", serif;
-}
-
 .cta-container {
     display: flex;
     margin: 2rem 0;
