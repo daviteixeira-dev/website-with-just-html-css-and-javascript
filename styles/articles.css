@@ -110,5 +110,13 @@ body main .article-content {
 
     .article-img {
         max-width: 40%;
-    } 
+    }
+    
+    body .main-blog {
+        display: flex;
+    }
+
+    body .main-blog .article-content article {
+        width: 100%;
+    }
 }
