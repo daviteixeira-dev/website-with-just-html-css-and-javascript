@@ -24,3 +24,8 @@ const elementoMesAnoFrase = document.getElementById('mes-ano-frase');
 
 elementoAno.textContent = `${anoAtual}`;
 elementoMesAnoFrase.textContent = `Última atualização: ${mesatual + '/' + anoAtual}!`;
+
+const currentUrl = encodeURIComponent(window.location.href);
+document.querySelector('#facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+document.querySelector('#twitter-share').href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=Confira este artigo!`;
+document.querySelector('#whatsapp-share').href = `https://api.whatsapp.com/send?text=Confira%20este%20artigo!%20https:${currentUrl}`;

@@ -315,6 +315,22 @@ body main .courses .container .tablet .nota .button:hover {
     background-color: var(--color-base-green-700);
 }
 
+body main #conclusao .compartilhamento {
+    display: flex;
+    justify-content: center;
+}
+
+body main #conclusao .compartilhamento a img {
+    width: 5rem;
+    height: auto;
+    margin: .5rem;
+    transition: filter 0.3s ease;
+}
+
+body main #conclusao .compartilhamento a img:hover {
+    filter: brightness(1.2);
+}
+
 body main section .faq {
     border-radius: 2rem;
 }
