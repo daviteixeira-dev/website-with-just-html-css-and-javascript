@@ -111,8 +111,8 @@ body main .article-content {
     .article-img {
         max-width: 40%;
     }
-    
-    body .main-blog {
+
+    body .main-blog .article-content {
         display: flex;
     }
 
