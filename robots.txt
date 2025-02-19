@@ -1,7 +1,7 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
 Allow: /
+
+# Bloquear arquivos desnecessários para SEO
+Disallow: /vercel.json
 
 Sitemap: https://melhorescursosdemanicureonline.vercel.app/sitemap.xml
