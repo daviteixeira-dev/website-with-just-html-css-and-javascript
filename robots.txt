@@ -3,5 +3,6 @@ Allow: /
 
 # Bloquear arquivos desnecessários para SEO
 Disallow: /vercel.json
+Disallow: /assets/images/
 
 Sitemap: https://melhorescursosdemanicureonline.vercel.app/sitemap.xml
