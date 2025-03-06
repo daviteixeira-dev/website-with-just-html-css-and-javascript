@@ -161,6 +161,52 @@ body header .hero p {
     line-height: 3rem;
 }
 
+body main {
+    width: 100%;
+}
+
+body main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+body main .container aside {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--color-base-white);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+body main .container aside div {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-base-pink-800);
+}
+
+body main .container aside div h3 {
+    margin: 0;
+    color: var(--color-base-white);
+}
+
+body main .container .img-persona {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    border: 6px solid var(--color-base-pink-800);
+}
+
+body main .container aside p {
+    text-align: center;
+}
+
 body main .title-box {
     padding: 2rem;
 }
@@ -555,7 +601,15 @@ body footer {
     }
 
     body main {
-        padding: 0 10rem;
+        padding: 0 3rem;
+    }
+
+    body main .container {
+        flex-direction: row;
+    }
+
+    body main .container aside {
+        width: 25%;
     }
 
     body main .courses {
