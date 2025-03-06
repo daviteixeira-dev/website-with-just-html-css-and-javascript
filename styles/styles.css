@@ -181,7 +181,8 @@ body main .container aside {
     box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
-body main .container aside div {
+body main .container aside .about-persona,
+body main .container aside .aside-share {
     width: 100%;
     display: flex;
     text-align: center;
@@ -190,9 +191,24 @@ body main .container aside div {
     background: var(--color-base-pink-800);
 }
 
-body main .container aside div h3 {
+body main .container aside .about-persona h3,
+body main .container aside .aside-share h4 {
     margin: 0;
     color: var(--color-base-white);
+}
+
+body main .container aside .compartilhamento {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+body main .container aside .compartilhamento a {
+    text-decoration: none;
+}
+
+body main .container aside .compartilhamento a img {
+    width: 5rem;
+    height: 5rem;
 }
 
 body main .container .img-persona {
