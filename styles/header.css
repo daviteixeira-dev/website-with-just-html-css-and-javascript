@@ -1,0 +1,250 @@
+body header {
+    height: auto;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid var(--color-base-pink-800);
+}
+
+body header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/images/desktop-1440/img-nails-banner.webp") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body header #menu {
+    display: none;
+}
+
+body header #menu-toggle {
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1rem 1.5rem;
+    color: var(--color-base-gray-500);
+    background: var(--color-base-pink-400);
+}
+
+body header #menu-toggle:hover{
+    transition: all 200ms ease-out;
+    background: var(--color-base-pink-800);
+}
+
+body header #sidebar-menu {
+    top: 0;
+    z-index: 2;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    transition: left 0.3s ease;
+    color: var(--color-base-gray-500);
+    background-color: var(--color-base-white);
+}
+
+body header #sidebar-menu ul {
+    padding: 20px;
+    margin-top: 8rem;
+    list-style-type: none;
+}
+
+body header #sidebar-menu ul li {
+    margin-bottom: 20px;
+}
+
+body header #sidebar-menu ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-base-gray-500);
+}
+
+body header #sidebar-menu ul li a:hover {
+    color: var(--color-base-gray-700)
+}
+
+body header #sidebar-menu.open {
+    left: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: relative;
+}
+
+body.menu-open::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body header .hero {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    text-align: left;
+    margin-top: 4rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body header .hero h1 {
+    margin: 1rem 0;
+    font-size: 4.5rem;
+    padding-top: 2rem;
+    font-family: "Playfair Display", serif;
+}
+
+body header .hero p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+@media(min-width: 768px){
+    body header {
+        padding: 0;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    body header .hero {
+        padding: 0 8rem;
+    }
+
+    body header h1 {
+        margin: 1rem;
+    }
+
+    body header p {
+        margin: 1rem;
+    }
+}
+
+@media(min-width: 1024px){
+    body header {
+        justify-content: flex-start;
+    }
+
+    body header #menu-toggle {
+        display: none;
+    }
+
+    body header #sidebar-menu {
+        display: none;
+    }
+
+    body header #menu {
+        z-index: 4;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        background: linear-gradient(90deg, rgba(255,221,230,1) 0%, rgba(253,203,207,1) 35%, rgba(254,159,166,1) 100%);
+    }
+
+    /* Menu Superior */
+
+    body header #menu ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: space-evenly;
+    }
+
+    body header #menu ul li {
+        position: relative;
+        margin-right: 2rem;
+    }
+
+    body header #menu ul li a {
+        display: block;
+        font-weight: 500;
+        font-size: 1.8rem;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: var(--color-base-gray-500);
+    }
+
+    body header #menu ul li .submenu {
+        left: 0;
+        top: 100%; /* Coloca o submenu logo abaixo do item de menu pai */
+        z-index: 1;
+        display: none;
+        position: absolute; /* Para que o submenu fique sobreposto */
+        background-color: var(--color-base-white);
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    }
+
+    body header #menu ul li .submenu li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body header #menu ul li .submenu li a {
+        width: 40rem; /* Definindo a largura do submenu */
+        color: black;
+        text-align: left;
+        padding: 10px 15px;
+        background-color: #f9f9f9;
+    }
+    
+    /* Mostrar o submenu ao passar o mouse no item "Blog" */
+    body header #menu ul li:hover .submenu,
+    body header #menu ul li:focus-within .submenu {
+        display: block;
+    }
+    
+    /* Estilos opcionais para o submenu */
+    body header #menu ul li .submenu li a:hover {
+        background-color: #e2e2e2; /* Cor de fundo ao passar o mouse nos itens do submenu */
+    }
+
+    body header #menu ul li .submenu li a:focus {
+        background-color: #e2e2e2;
+    }
+
+    body header #menu ul li a:hover{
+        transition: all 200ms ease-out;
+        color: var(--color-base-gray-700);
+    }
+
+    body header #menu ul li #logo-menu img {
+        height: 4.5rem;
+        max-width: 4.5rem;
+    }
+
+    /* Fim - Menu Superior */
+
+    body header .hero {
+        width: 70%;
+    }
+    
+    body header h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+}

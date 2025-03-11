@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-base-white: rgb(249, 249, 249);
+    --color-base-pink-100: rgb(255, 221, 230, 0.5);
+    --color-base-pink-400: rgb(253, 203, 207);
+    --color-base-pink-800: rgb(254, 159, 166);
+    --color-base-pink-900: rgb(252, 45, 111);
+    --color-base-gray-100: rgb(242, 242, 242);
+    --color-base-gray-500: rgb(43, 43, 69);
+    --color-base-gray-700: rgb(28, 28, 28);
+    --color-base-green-500: rgb(0, 99, 51);
+    --color-base-green-700: rgb(0, 204, 102);
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--color-base-pink-900);
+    font-family: "Playfair Display", serif;
+}
+
+html, 
+body {
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+    color: var(--color-base-gray-500);
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-base-white);
+}
+
+body main {
+    width: 100%;
+}
+
+body main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+body main .title-box {
+    padding: 2rem;
+}
+
+body main p {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 1rem 2rem;
+}
+
+body main ul {
+    margin: 1rem;
+    padding: 0rem 2rem;
+    list-style-type: none;
+}
+
+body main ul li {
+    width: 100%;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+    list-style: none;
+    align-items: center;
+    justify-content: baseline;
+    padding: .3rem .3rem .3rem 3rem;
+    background: url('../assets/icons/brilha-25-x-25.webp') no-repeat left center;
+    background-size: 2rem;
+}
+
+.cta-container {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.cta-link {
+    font-weight: bold;
+    color: var(--color-base-pink-900)
+}
+
+.cta-button {
+    width: 45rem;
+    height: 3rem;
+    display: flex;
+    font-size: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--color-base-white);
+    transition: all 200ms ease-out;
+    background-color: var(--color-base-green-500);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--color-base-green-700);
+}
+
+.img-persona {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    border: 6px solid var(--color-base-pink-800);
+}
+
+body main #conclusao .compartilhamento {
+    display: flex;
+    justify-content: center;
+}
+
+body main #conclusao .compartilhamento a img {
+    width: 5rem;
+    height: auto;
+    margin: .5rem;
+    transition: filter 0.3s ease;
+}
+
+body main #conclusao .compartilhamento a img:hover {
+    filter: brightness(1.2);
+}
+
+body main .risco {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body main .risco img {
+    height: auto;
+    max-width: 100%;
+}
+
+@media(min-width: 768px){
+    body main {
+        padding: 0 1rem;
+    }
+
+    body main .risco img {
+        height: 20rem;
+        max-width: 35rem;
+    }
+}
+
+@media(min-width: 1024px){
+    body main {
+        padding: 0 3rem;
+    }
+
+    body main .container {
+        width: 100%;
+        flex-direction: row;
+    }
+}

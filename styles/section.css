@@ -1,0 +1,151 @@
+section {
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+    flex-direction: column;
+}
+
+/*.article-blog {
+    width: 100%;
+}*/
+
+/*.article-blog .article-content {
+    padding: 1rem 2rem;
+}*/
+
+section p {
+    padding: 0;
+    margin: 1rem 0;
+    line-height: 3rem;
+}
+
+section article {
+    padding: 2rem;
+    display: flex;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+section article .article-card-body .article-left img {
+    height: auto;
+    max-width: 100%;
+}
+
+section article .article-card-body .article-right {
+    padding: 1rem;
+}
+
+section article h2 {
+    text-align: center;
+}
+
+section article .article-date {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+section article p {
+    margin-bottom: 2rem;
+}
+
+.article-img-container {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.article-img {
+    height: auto;
+    max-width: 100%;
+}
+
+section article .article-btn {
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-base-white);
+    background-color: var(--color-base-pink-900);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+section article .article-btn:hover {
+    transition: all 200ms ease-out;
+    background: var(--color-base-pink-800);
+}
+
+section .faq {
+    border-radius: 2rem;
+}
+
+section .faq details {
+    margin: .5rem;
+    box-shadow: 
+        rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, 
+        rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, 
+        rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+section .faq details:hover {
+    cursor: pointer;
+}
+
+section .faq details summary {
+    padding: 1rem;
+    font-size: 2rem
+}
+
+.faq-details {
+    padding: 1rem;
+    background-color: var(--color-base-pink-800)
+}
+
+@media(min-width: 768px){
+    div.articles-container {
+        display: flex;
+    }
+
+    div.article-blogg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+       flex-direction: row; 
+    }
+
+    section article {
+        width: 48%;
+    }
+    
+    section.article-content {
+        justify-content: space-around;
+    }
+
+    div.article-blogg section.article-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.articles-container section.article-content .article-card-body {
+        flex-direction: row;
+    }
+
+    div.article-blogg section.article-content .article-img-container .article-img {
+        max-width: 40%;
+    }
+}
+
+@media(min-width: 1024px){
+    div.articles-container {
+        width: 75%;
+    }
+
+    div.article-blogg {
+        width: 75%;
+    }
+}

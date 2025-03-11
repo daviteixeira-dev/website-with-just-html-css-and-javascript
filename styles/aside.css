@@ -1,0 +1,52 @@
+aside {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--color-base-white);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+aside .about-persona,
+aside .aside-share {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-base-pink-800);
+}
+
+aside .about-persona h3,
+aside .aside-share h4 {
+    margin: 0;
+    color: var(--color-base-white);
+}
+
+aside .compartilhamento {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+aside .compartilhamento a {
+    text-decoration: none;
+}
+
+aside .compartilhamento a img {
+    width: 5rem;
+    height: 5rem;
+}
+
+aside p {
+    text-align: center;
+}
+
+@media(min-width: 768px){}
+
+@media(min-width: 1024px){
+    aside {
+        width: 25%;
+    }
+}
